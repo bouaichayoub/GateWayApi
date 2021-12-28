@@ -10,9 +10,9 @@ public class GateWayApiConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("commande-service", r -> r.path("/commande/**")
+                .route("commande-service", r -> r.path("/api/client/**")
                         .uri("lb://MS-COMMANDE"))
-                .route("paiement-service", r -> r.path("/paiement/**")
+                .route("paiement-service", r -> r.path("/api/paiement/**")
                         .uri("lb://MS-PAIEMENT"))
                 .build();
     }
